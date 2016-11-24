@@ -12,6 +12,9 @@ class Article < ActiveRecord::Base
 
   validates :user_id,
     presence: true
-    
+
+  has_many :article_categories
+  has_many :categories, through: :article_categories
+      
 end
 

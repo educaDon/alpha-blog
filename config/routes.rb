@@ -7,6 +7,7 @@ root 'pages#home'
 
 resources :articles
 resources :users, except: [:new]
+resources :categories, except: [:destroy]
 
 get    'about',  to: 'pages#about'
 
